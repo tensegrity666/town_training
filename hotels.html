@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Городок SEDONA</title>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-navigation">
+            <ul class="main-navigation-list">
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Фото и видео</a></li>
+                <li><a href="#">Логотип курорта Sedona</a></li>
+                <li><a href="#">Карта штата</a></li>
+                <li><a href="#">Гостиницы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+    <h1 class="visually-hidden">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+    <section>
+        <h2 class="visually-hidden">Поиск отеля</h2>
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+                <legend>Инфраструктура:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-swimming">
+                            <label for="filter-swimming">Бассейн</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="features" id="filter-parking">
+                            <label for="filter-parking">Парковка</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-wifi">
+                            <label for="filter-wifi">WI-FI</label>
+                        </li>
+                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Тип жилья:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-hotel">
+                            <label for="filter-slider">Гостиница</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="features" id="filter-motel">
+                            <label for="filter-features">Мотель</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-apartments">
+                            <label for="filter-news">Апартаменты</label>
+                        </li>
+                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Стоимость в сутки:</legend>
+                    <label class="visually-hidden" for="filter-cost">Стоимость</label>
+                    <input class="visually-hidden filter-input filter-input-range" type="range" min="0" max="50000" step="100"  name="cost" id="filter-cost">
+                    <label class="" for="cost-min">От</label>
+                    <input class="filter-input filter-input-cost" type="text" name="cost-min" placeholder="0"  id="cost-min">
+                    <label class="" for="cost-max">До</label>
+                    <input class="filter-input filter-input-cost" type="text" name="cost-max" placeholder="50000"  id="cost-max">
+            </fieldset>
+        <button class="button filter-button" type="submit">Показать</button>
+        <section class="sort">
+            <h2>Сортировать:</h2>
+            <a href="#">По цене</a>
+            <a href="#">По типу</a>
+            <a href="#">По рейтингу</a>
+            <a href="#">По возрастанию</a>
+            <a href="#">По убыванию</a>
+        </section>
+        </form>
+    </section>
+    <section>
+        <h2 class="visually-hidden">Найденные варианты</h2>
+        <ul>
+            <li>
+                
+            </li>
+        </ul>
+    </section>
+    </main>
+
+    <footer>
+        <section class="footer-social">
+            <h2 class="visually-hidden">Мы в соцсетях</h2>
+            <b class="hashtag">#visitsedona</b>
+            <ul>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Youtube</a></li>
+            </ul>
+            <p>Websyte by <a href="#">TNSGRTY666</a></p>
+        </section>
+    </footer>
+    </body>
+
+    </html>
