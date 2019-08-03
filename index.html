@@ -4,95 +4,116 @@
 <head>
   <meta charset="UTF-8">
   <title>Городок SEDONA</title>
-  <!--    <link rel="stylesheet" href="styles/normalize.css">-->
-  <link rel="stylesheet" href="styles/style.css">
+<!--  <link rel="stylesheet" href="styles/normalize.css">-->
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body class="container">
-  <header class="main-header">
+ 
+  <header>
     <nav class="main-navigation">
       <ul class="main-navigation-list">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Логотип курорта Sedona</a></li>
+        <li><a href="#"><img src="images/logos/logo.png" alt="Логотип города Седона"></a></li>
         <li><a href="#">Карта штата</a></li>
         <li><a href="#">Гостиницы</a></li>
       </ul>
     </nav>
+    <section class="promo">
+<!--      <h3 class="visually-hidden">Добро пожаловать в Седону!</h3>-->
+      <img src="images/background2.jpg" alt="Живописный вид на скалы и лес" width="1200" height="510">
+    </section>
   </header>
-  <main class="content">
-    <h1>Седона — небoльшой городок в Аризоне, заслуживающий большего!</h1>
-    <section class="features">
+  
+  <main>
+   
+    <h1 class="main-title">Седона — небoльшой городок в Аризоне,<br> заслуживающий большего!</h1>
+    
+    <article class="reasons">
+     
       <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
-      <ul class="features-list">
-        <div class="feature-item-town">
-          <img src="img/town.jpg" alt="Фото старинного деревянного здания на фоне гор" width="800" height="400">
-          <li>
-            <strong>Настоящий городок</strong>
-            <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
-          </li>
-        </div>
-        <div class="recommendation">
-          <li>
-            <section class="recommendation-items">
-              <h2 class="visually-hidden">Наши рекомендации</h2>
-              <ul>
-                <li>
+    
+        <section class="reason-list">
+         
+          <div class="reason-wrapper-1">
+              <p class="reason-item-town">
+                <strong>Настоящий<br> городок</strong>
+                <b>— №1 —</b>
+                <b>Седона — не аттракцион для туристов, там течет своя жизнь</b>
+              </p>
+            <img src="images/content/town.jpg" alt="Фото старинного деревянного здания на фоне гор" width="800" height="260">
+          </div>
+        
+          <div class="reason-wrapper-3">
+            <img src="images/content/bridge.jpg" alt="Фото двух красных скал, образующих арку" width="800" height="260">
+              <p class="reason-item-bridge">
+                <strong>Там есть<br> мост дьявола</strong>
+                <b>— №2 —</b>
+                <b>Да, по нему можно пройти! Если, конечно, Вы осмелитесь</b>
+              </p>
+          </div>
+              
+          <div class="reason-wrapper-4"> 
+            <p class="reason-other">
+              <strong>Небольшая<br> площадь</strong>
+              <b>— №3 —</b>
+              <b>Все достопримечательности находятся очень близко</b>
+            </p>
+
+            <p class="reason-other">
+              <strong>Красивая<br> дорога</strong>
+              <b>— №4 —</b>
+              <b>Ехать в Седону из Лас-Вегаса совсем не скучно!</b>
+            </p>
+
+            <p class="reason-other">
+              <strong>Мало<br> туристов</strong>
+              <b>— №5 —</b>
+              <b>Большинство едет в Гранд Каньон и толпится там</b>
+            </p>
+          </div>
+             
+          <section class="recommendation">
+    <!--        <h3 class="visually-hidden">Наши рекомендации</h3>-->
+              <ul class="reason-wrapper-2">
+                <li class="recommendation-housing">
                   <b>Жильё</b>
-                  <p>Рекомендуем пожить в настоящем<br> мотеле. Все как в кино!</p>
+                  <p>Рекомендуем пожить в настоящем мотеле. Все как в кино!</p>
                 </li>
-                <li>
+                <li class="recommendation-food">
                   <b>Еда</b>
-                  <p>Всегда заказывайте фирменный бургер,<br> Вы не разочаруетесь!</p>
+                  <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
                 </li>
-                <li>
+                <li class="recommendation-souvenirs">
                   <b>Сувениры</b>
-                  <p>Не только китайского, но и местного<br> производства!</p>
+                  <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
-            </section>
-          </li>
-        </div>
-        <div class="feature-item-bridge">
-          <img src="img/bridge.jpg" alt="Фото двух красных скал, образующих арку" width="800" height="400">
-          <li>
-            <strong>Там есть мост дьявола</strong>
-            <p>Да, по нему можно пройти! Если, конечно, Вы осмелитесь</p>
-          </li>
-        </div>
-        <div class="feature-item-other">
-          <li>
-            <strong>Небольшая площадь</strong>
-            <p>Все достопримечательности находятся очень близко</p>
-          </li>
-          <li>
-            <strong>Красивая дорога</strong>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li>
-            <strong>Мало туристов</strong>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-        </div>
-      </ul>
-    </section>
+          </section>
+      
+        </section>
+    </article>
 
     <section class="booking">
-      <h2>Поиск гостиницы</h2>
+<!--      <h2>Поиск гостиницы</h2>-->
       <strong>Заинтересовались?</strong>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <img src="#" alt="Карта города Седона">
-    </section>
+      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+
     <!-- Форма поиска -->
-    <section>
-      <h2>Выберите даты поездки и количество человек</h2>
+      <button>Поиск гостиницы в Cедоне</button>
       <!-- Выпадающая форма поиска -->
     </section>
+    
+    <section class=" map">
+     <img src="images/content/map.jpg" alt="" width="1200">
+    </section>
+    
   </main>
 
   <footer>
-    <section class="footer-social">
-      <h2>Мы в соцсетях</h2>
+    <section class="container footer-social">
+<!--      <h2>Мы в соцсетях</h2>-->
       <b class="hashtag">#visitsedona</b>
       <ul>
         <li><a href="#">Twitter</a></li>
