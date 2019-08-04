@@ -38,7 +38,8 @@ input[type="radio"].visually-hidden {
   width: 1200px;
   background-color: #fff;
   
-  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0 20px 5px rgba(0, 0, 0, 0.2),
+              -10px 0 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main-navigation-list {
@@ -57,7 +58,7 @@ input[type="radio"].visually-hidden {
 
 .main-navigation-list a {
   display: inline-block;
-  padding: 20px 40px 25px 40px;
+  padding: 15px 40px 25px 40px;
   
   color: #000;
   font-size: 16px;
@@ -76,7 +77,7 @@ input[type="radio"].visually-hidden {
 
 .main-navigation-list a img {
   position: relative;
-  margin-top: -20px;
+  margin-top: -15px;
   width: 138px;
   height: 70px;
 }
@@ -174,28 +175,29 @@ input[type="radio"].visually-hidden {
 }
 
 .reason-wrapper-1 {
+  max-width: 1200px;
   order: 1;
 }
 
 .recommendation {
+  max-width: 1200px;
   order: 2;
 }
 
 .reason-wrapper-3 {
+  max-width: 1200px;
   order: 3;
 }
 
 .reason-wrapper-4 {
+  max-width: 1200px;
   order: 4;
 }
 
 .recommendation-housing, 
 .recommendation-food,
 .recommendation-souvenirs,
-.booking {
-  position: relative;
-  
-  display: flex;
+.booking {display: flex;
   flex-direction: column;
   min-width: 310px;
   min-height: 165px;
@@ -211,7 +213,7 @@ input[type="radio"].visually-hidden {
 .recommendation-souvenirs {
   min-width: 260px;
   min-height: 100px;
-  padding: 140px 70px 20px 70px;
+  padding: 130px 70px 30px 70px;
 }
 
 .recommendation-housing p, 
@@ -222,55 +224,22 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.recommendation-housing b::before {
-  content: "";
-  
-  position: absolute;
-  width: 75px;
-  height: 72px;
-  top: 50%;
-  left: 50%;
-  
-  margin-top: -70px;
-  margin-left: -38px;
-  
+.recommendation-housing {
   background-image: url("../images/logos/house.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 163px 40px;
 }
 
-.recommendation-food::before {
-  content: "";
-  
-  position: absolute;
-  width: 70px;
-  height: 74px;
-  top: 50%;
-  left: 50%;
-  
-  margin-top: -72px;
-  margin-left: -35px;
-  
+.recommendation-food {
   background-image: url("../images/logos/burger.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 162px 40px;
 }
 
-.recommendation-souvenirs::before {
-  content: "";
-  
-  position: absolute;
-  width: 64px;
-  height: 76px;
-  top: 50%;
-  left: 50%;
-  
-  margin-top: -72px;
-  margin-left: -31px;
-  
+.recommendation-souvenirs {
   background-image: url("../images/logos/souvenir.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 165px 40px;
 }
 
 .booking {
@@ -290,9 +259,7 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
 }
 
-.booking .button-search {
-  min-width: 570px;
-  min-height: 85px;
+.button {
   border: none;
   
   color: #fff;
@@ -303,6 +270,12 @@ input[type="radio"].visually-hidden {
   
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.booking .button-search {
+  min-width: 570px;
+  min-height: 85px;
+  border: none;
 }
 
 .booking .button-search:hover {
@@ -319,6 +292,8 @@ input[type="radio"].visually-hidden {
   min-height: 480px;
   
   object-fit: cover;
+  
+  z-index: 1;
 }
 
 .footer-transparent {
@@ -443,4 +418,108 @@ input[type="radio"].visually-hidden {
 
 .footer-social .author-tag:active {
   color: #bdbbbc;
+}
+
+.modal {
+  position: absolute;
+  box-sizing: border-box;
+  
+  top: 2093px;
+
+  width: 570px;
+  min-height: 395px;
+  
+  padding: 55px;
+  margin-left: 315px;
+  margin-right: auto;
+  
+  color: #000;
+  background-color: #fff;
+  
+/*  display: none;*/
+}
+
+.modal form {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 285px;
+  
+  font-weight: bold;
+}
+
+.modal .dates {
+  display: flex;
+  flex-flow: column wrap;
+  
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.modal .visitors {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.modal .dates li,
+.modal .visitors li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding-bottom: 30px;
+}
+
+.calendar-icon {
+  background-image: url(../images/logos/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 310px 10px;
+}
+
+.modal .dates input {
+  width: 265px;
+  min-height: 40px;
+  
+  padding: 0 60px 0 20px;
+  
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.modal .visitors input {
+  width: 35px;
+  min-height: 40px;
+  
+  padding: 0 40px;
+  
+  background-color: #f2f2f2;
+  border: none;
+  text-align: center;
+}
+
+.modal .visitors label {
+  padding-right: 40px;
+}
+
+.button-form {
+  width: 460px;
+  height: 60px;
+  
+  color: #fff;
+  background-color: #81b3d2;
+}
+
+.button-form:hover {
+  background-color: #669ec0;
+}
+
+.button-form:active {
+  color: #94b9d2;
+  background-color: #5496bd;
 }

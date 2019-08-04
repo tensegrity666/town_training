@@ -30,7 +30,7 @@
    
     <h1 class="main-title">Седона — небoльшой городок в Аризоне,<br> заслуживающий большего!</h1>
     
-    <article class="reasons">
+    <article class=" reasons">
      
       <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
     
@@ -58,19 +58,19 @@
             <p class="reason-other">
               <strong>Небольшая<br> площадь</strong>
               <b>— №3 —</b>
-              <b>Все достопримечательности находятся очень близко</b>
+              <b>Все достопримечательности находятся<br> очень близко</b>
             </p>
 
             <p class="reason-other">
               <strong>Красивая<br> дорога</strong>
               <b>— №4 —</b>
-              <b>Ехать в Седону из Лас-Вегаса совсем не скучно!</b>
+              <b>Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</b>
             </p>
 
             <p class="reason-other">
               <strong>Мало<br> туристов</strong>
               <b>— №5 —</b>
-              <b>Большинство едет в Гранд Каньон и толпится там</b>
+              <b>Большинство едет в Гранд Каньон<br> и толпится там</b>
             </p>
           </div>
              
@@ -79,15 +79,15 @@
               <ul class="reason-wrapper-2">
                 <li class="recommendation-housing">
                   <b>Жильё</b>
-                  <p>Рекомендуем пожить в настоящем мотеле. Все как в кино!</p>
+                  <p>Рекомендуем пожить в настоящем мотеле<br> Все как в кино!</p>
                 </li>
                 <li class="recommendation-food">
                   <b>Еда</b>
-                  <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                  <p>Всегда заказывайте фирменный бургер,<br> Вы не разочаруетесь!</p>
                 </li>
                 <li class="recommendation-souvenirs">
                   <b>Сувениры</b>
-                  <p>Не только китайского, но и местного производства!</p>
+                  <p>Не только китайского,<br> но и местного производства!</p>
                 </li>
               </ul>
           </section>
@@ -96,11 +96,11 @@
     </article>
 
     <section class="booking">
-      <h2>Поиск гостиницы</h2>
+      <h2 class="visually-hidden">Поиск гостиницы</h2>
       <strong>Заинтересовались?</strong>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
-      <button class="button-search">Поиск гостиницы в Cедоне</button>
+      <button class="button button-search">Поиск гостиницы в Cедоне</button>
     </section>
     
     <section class="map">
@@ -121,6 +121,33 @@
       <p>Websyte by<a class="author-tag" href="#">TNSGRTY666</a></p>
     </section>
   </footer>
+  
+<section class="modal">
+  <form action="https://echo.htmlacademy.ru" method="get">
+    <ul class="dates">
+      <li>
+        <label for="date-in">Дата заезда:</label>
+        <input class="calendar-icon" id="date-in" type="text" name="date-in" placeholder="01 мая 2020">
+      </li>
+      <li>
+        <label for="date-out">Дата выезда:</label>
+        <input class="calendar-icon" id="date-out" type="text" name="date-out" placeholder="15 мая 2020">
+      </li>
+    </ul>
+    <ul class="visitors">
+      <li>
+        <label for="adult">Взрослые:</label>
+        <input id="adult" type="text" name="visitor" value="2">
+      </li>
+      <li>
+        <label for="children">Дети:</label>
+        <input id="children" type="text" name="children" value="0" placeholder="1">
+      </li>
+    </ul>
+  <button class="button button-form">Найти</button>
+  </form>
+</section>  
+  
 </body>
 
 </html>
