@@ -2,30 +2,39 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Городок SEDONA</title>
+  <meta charset="UTF-8">
+  <title>Городок SEDONA</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
-    <header class="main-header">
-        <nav class="main-navigation">
-            <ul class="main-navigation-list">
-                <li><a href="#">Информация</a></li>
-                <li><a href="#">Фото и видео</a></li>
-                <li><a href="#">Логотип курорта Sedona</a></li>
-                <li><a href="#">Карта штата</a></li>
-                <li><a href="#">Гостиницы</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<body class="container inner-page">
+ 
+  <header>
+    <nav class="main-navigation">
+      <ul class="main-navigation-list">
+        <li><a href="index.html">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#"><img src="images/logos/logo.png" alt="Логотип города Седона"></a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="hotels.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+    <section class="promo">
+      <h3 class="visually-hidden">Добро пожаловать в Седону!</h3>
+      <img src="images/background-inner.jpg" alt="Живописный вид на скалы и лес" width="1200" height="220">
+    </section>
+  </header>
     <main>
 
     <h1 class="visually-hidden">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-    <section>
+    <section class="hotels-forms">
         <h2 class="visually-hidden">Поиск отеля</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+            <div class="accomodations">
             <fieldset>
                 <legend>Инфраструктура:</legend>
-                    <ul>
+                    <ul class="infrastructure">
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-swimming">
                             <label for="filter-swimming">Бассейн</label>
@@ -40,9 +49,10 @@
                         </li>
                     </ul>
             </fieldset>
+            
             <fieldset>
                 <legend>Тип жилья:</legend>
-                    <ul>
+                    <ul class="housing-type">
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-hotel">
                             <label for="filter-slider">Гостиница</label>
@@ -57,26 +67,31 @@
                         </li>
                     </ul>
             </fieldset>
+            </div>
+            <div class="cost">
             <fieldset>
-                <legend>Стоимость в сутки:</legend>
+                <legend>Стоимость в сутки (Р):</legend>
                     <label class="visually-hidden" for="filter-cost">Стоимость</label>
                     <input class="visually-hidden filter-input filter-input-range" type="range" min="0" max="50000" step="100"  name="cost" id="filter-cost">
-                    <label class="" for="cost-min">От</label>
-                    <input class="filter-input filter-input-cost" type="text" name="cost-min" placeholder="0"  id="cost-min">
-                    <label class="" for="cost-max">До</label>
-                    <input class="filter-input filter-input-cost" type="text" name="cost-max" placeholder="50000"  id="cost-max">
+                    <label class="visually-hidden" for="cost-min">От</label>
+                    <input class="filter-input filter-input-cost filter-input-cost-1" type="text" name="cost-min" placeholder="ОТ 0"  id="cost-min">
+                    <label class="visually-hidden" for="cost-max">До</label>
+                    <input class="filter-input filter-input-cost filter-input-cost-2" type="text" name="cost-max" placeholder="ДО 50000"  id="cost-max">
             </fieldset>
-        <button class="button filter-button" type="submit">Показать</button>
-        <section class="sort">
-            <h2>Сортировать:</h2>
-            <a href="#">По цене</a>
-            <a href="#">По типу</a>
-            <a href="#">По рейтингу</a>
-            <a href="#">По возрастанию</a>
-            <a href="#">По убыванию</a>
-        </section>
+            <button class="button filter-button" type="submit">Показать</button>
+            </div>
         </form>
     </section>
+       
+    <section class="sort">
+        <h2>Сортировать:</h2>
+        <a href="#">По цене</a>
+        <a href="#">По типу</a>
+        <a href="#">По рейтингу</a>
+        <a href="#">По возрастанию</a>
+        <a href="#">По убыванию</a>
+    </section>
+    
     <section>
         <h2 class="visually-hidden">Найденные варианты</h2>
         <ul>
@@ -87,18 +102,19 @@
     </section>
     </main>
 
-    <footer>
-        <section class="footer-social">
-            <h2 class="visually-hidden">Мы в соцсетях</h2>
-            <b class="hashtag">#visitsedona</b>
-            <ul>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Youtube</a></li>
-            </ul>
-            <p>Websyte by <a href="#">TNSGRTY666</a></p>
-        </section>
-    </footer>
+    <footer class="inner-page">
+    <section class="footer-social">
+      <h2 class="visually-hidden">Мы в соцсетях</h2>
+      <a class="hashtag" href="">#visitsedona</a>
+      <ul>
+        <li><a class="twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a class="facebook" href="#"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a class="youtube" href="#"><span class="visually-hidden">Youtube</span></a></li>
+      </ul>
+      <p>Websyte by<a class="author-tag" href="#">TNSGRTY666</a></p>
+    </section>
+  </footer>
+  
     </body>
 
     </html>

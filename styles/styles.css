@@ -91,6 +91,15 @@ input[type="radio"].visually-hidden {
   object-fit: cover;
 }
 
+.inner-page .promo img {
+  width: 1200px;
+  height: 220px;
+  margin-top: -45px;
+  margin-bottom: 60px;
+  
+  object-fit: cover;
+}
+
 .main-title {
   margin: 0;
   padding: 0;
@@ -407,7 +416,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  vertical-align: text-bottom;
+  vertical-align: middle;
   
   text-decoration: none;
 }
@@ -419,6 +428,8 @@ input[type="radio"].visually-hidden {
 .footer-social .author-tag:active {
   color: #bdbbbc;
 }
+
+/*Модальное окно*/
 
 .modal {
   position: absolute;
@@ -522,4 +533,125 @@ input[type="radio"].visually-hidden {
 .button-form:active {
   color: #94b9d2;
   background-color: #5496bd;
+}
+
+/*Внутренняя страница*/
+
+.inner-page > .footer-social {
+  position: inherit;
+  display: flex;
+  justify-content: space-between;
+  
+  width: 1200px;
+  min-height: 120px;
+  
+  margin-top: 40px;
+  
+  color: #000;
+  background-color: #fff;
+}
+
+.hotels-forms fieldset {
+  border: none;
+}
+
+.inner-page .filter {
+  position: relative;
+}
+
+.accomodations {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  
+  top: -270px;
+  left: 50px;
+  
+  color: #fff;
+}
+
+.cost {
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  
+  top: -270px;
+  right: 50px;
+  
+  color: #fff;
+}
+
+.infrastructure, 
+.housing-type {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.inner-page .filter-button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  min-width: 135px;
+  min-height: 35px;
+  
+  align-self: center;
+  
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.filter-input-cost {
+  position: relative;
+  
+  width: 115px;
+  min-height: 35px;
+  margin-bottom: 40px;
+  
+  padding: 0 10px 2px 40px;
+  
+  color: #fff;
+  
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+
+.filter-input-cost::placeholder {
+  color: #fff;
+}
+
+.filter-input-cost-1 {
+  margin-right: -2px;
+  border-right: transparent;
+}
+
+.filter-input-cost-1::after {
+  content: "111111111111111";
+  
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  
+  width: 2px;
+  height: 20px;
+
+  color: red;
+  background-color: #fff;
+}
+
+.filter-input-cost-2 {
+  margin-left: -2px;
+  border-left: transparent;
+}
+
+.inner-page .accomodations legend,
+.inner-page .cost legend {
+  margin: 35px 70px 15px 0;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: left;
 }
