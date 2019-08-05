@@ -20,10 +20,6 @@
         <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
-    <section class="promo">
-      <h3 class="visually-hidden">Добро пожаловать в Седону!</h3>
-      <img src="images/background-inner.jpg" alt="Живописный вид на скалы и лес" width="1200" height="220">
-    </section>
   </header>
     <main>
 
@@ -33,8 +29,9 @@
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <div class="accomodations">
             <fieldset>
+                <div class="infrastructure">
                 <legend>Инфраструктура:</legend>
-                    <ul class="infrastructure">
+                    <ul>
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-swimming">
                             <label for="filter-swimming">Бассейн</label>
@@ -48,11 +45,13 @@
                             <label for="filter-wifi">WI-FI</label>
                         </li>
                     </ul>
+              </div>
             </fieldset>
             
             <fieldset>
+                <div class="housing-type">
                 <legend>Тип жилья:</legend>
-                    <ul class="housing-type">
+                    <ul>
                         <li class="filter-option">
                             <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-hotel">
                             <label for="filter-slider">Гостиница</label>
@@ -66,17 +65,21 @@
                             <label for="filter-news">Апартаменты</label>
                         </li>
                     </ul>
+              </div>
             </fieldset>
             </div>
             <div class="cost">
             <fieldset>
-                <legend>Стоимость в сутки (Р):</legend>
-                    <label class="visually-hidden" for="filter-cost">Стоимость</label>
-                    <input class="visually-hidden filter-input filter-input-range" type="range" min="0" max="50000" step="100"  name="cost" id="filter-cost">
-                    <label class="visually-hidden" for="cost-min">От</label>
-                    <input class="filter-input filter-input-cost filter-input-cost-1" type="text" name="cost-min" placeholder="ОТ 0"  id="cost-min">
-                    <label class="visually-hidden" for="cost-max">До</label>
-                    <input class="filter-input filter-input-cost filter-input-cost-2" type="text" name="cost-max" placeholder="ДО 50000"  id="cost-max">
+              <legend>Стоимость в сутки (Р):</legend>
+              <div class="input-connected">
+                <label class="visually-hidden" for="cost-min">От</label>
+                <span class="border-inside"></span>
+                <input class="filter-input filter-input-cost filter-input-cost-1" type="text" name="cost-min" placeholder="ОТ 0"  id="cost-min">
+                <label class="visually-hidden" for="cost-max">До</label>
+                <input class="filter-input filter-input-cost filter-input-cost-2" type="text" name="cost-max" placeholder="ДО 50000"  id="cost-max">
+              </div>
+              <label class="visually-hidden" for="filter-cost">Стоимость</label>
+              <input class="filter-input filter-input-range" type="range" min="0" max="50000" step="100"  name="cost" id="filter-cost">
             </fieldset>
             <button class="button filter-button" type="submit">Показать</button>
             </div>
@@ -92,6 +95,7 @@
         <a href="#">По убыванию</a>
     </section>
     
+   
     <section>
         <h2 class="visually-hidden">Найденные варианты</h2>
         <ul>
