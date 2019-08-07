@@ -84,6 +84,12 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
 }
 
+.main-navigation-list a:not([href]),
+.main-navigation-list a:not([href]):hover,
+.main-navigation-list a:not([href]):active {
+  color: #766357;
+}
+
 .main-navigation-list a:hover {
   color: #81b3d2;
 }
@@ -645,9 +651,24 @@ input[type="radio"].visually-hidden {
 }
 
 .calendar-icon {
+  background-image: url(../images/logos/calendar-gray.svg);
+  background-repeat: no-repeat;
+  background-position: 310px 10px;
+}
+
+.calendar-icon:hover {
   background-image: url(../images/logos/calendar.svg);
   background-repeat: no-repeat;
   background-position: 310px 10px;
+}
+
+.calendar-icon:focus,
+.calendar-icon:active {
+  background-image: url(../images/logos/calendar-blue.svg);
+  background-repeat: no-repeat;
+  background-position: 310px 10px;
+  
+  transition: 0.2s;
 }
 
 .modal .dates input {
@@ -896,7 +917,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-range {
-  width: 330px;
+  width: 325px;
   height: 5px;
   margin: 10px 5px 35px 2px;
   padding: 0;
@@ -949,6 +970,7 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:checked + .checkbox-indicator {
   background-image: url(../images/logos/checkbox-on.svg);
   background-repeat: no-repeat;
+  
 }
 
 .filter-input-checkbox:focus + .checkbox-indicator {
@@ -991,13 +1013,13 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-.sort-types a:hover,
-.sort-types a:focus {
+.sort-types a:hover {
   color: #81b3d2;
   opacity: 1;
 }
 
-.sort-types a:active {
+.sort-types a:active,
+.sort-types a:focus {
   color: #000;
   text-decoration: none;
 }
@@ -1019,7 +1041,9 @@ input[type="radio"].visually-hidden {
 }
 
 .arrows .up:active polygon,
-.arrows .down:active polyline {
+.arrows .up:focus polygon,
+.arrows .down:active polyline,
+.arrows .down:focus polyline {
   fill: #81b3d2;
 }
 
@@ -1075,13 +1099,159 @@ input[type="radio"].visually-hidden {
   justify-content: flex-start;
   
   font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
 }
 
 .searched-variants .rating {
+  position: relative;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
-  text-align: end;
+  justify-content: flex-end;
   
   margin: 0;
+  padding: 0;
+}
+
+.description-wrapper b {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.description-wrapper b:hover,
+.description-wrapper b:focus {
+  color: #669ec0;
+}
+
+.description-wrapper b:active {
+  color: #cacaca;
+}
+
+.description-wrapper .button-about {
+  min-width: 110px;
+  min-height: 27px;
+  margin-right: 5px;
+  padding: 0 10px;
+  
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  
+  background-color: #81b3d2;
+}
+
+.description-wrapper .button-about {
+  min-width: 110px;
+  min-height: 27px;
+  margin-right: 5px;
+  padding: 0 10px;
+  
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  vertical-align: middle;
+  
+  background-color: #81b3d2;
+  
+  outline: none;
+}
+
+.description-wrapper .button-booking {
+  min-width: 145px;
+  min-height: 27px;
+  margin-right: 5px;
+  padding: 0 10px;
+  
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  vertical-align: middle;
+  
+  background-color: #766357;
+  
+  outline: none;
+}
+
+.description-wrapper .button-about:hover,
+.description-wrapper .button-about:focus {
+  background-color: #669ec0;
+}
+
+.description-wrapper .button-about:active {
+  color: #94b9d2;
+  background-color: #669ec0;
+}
+
+.description-wrapper .button-booking:hover,
+.description-wrapper .button-booking:focus {
+  background-color: #604e43;
+}
+
+.description-wrapper .button-booking:active {
+  color: #928a85;
+  background-color: #503e33;
+}
+
+.rating b {
+  min-width: 110px;
+  min-height: 17px;
+  margin: 0;
+  padding: 3px 10px;
+  
+  color: #666;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  
+  background-color: #f2f2f2;
+}
+
+
+.rating .two-stars {
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  
+  width: 36px;
+  height: 18px;
+  
+  background-image: url(../images/logos/star%20.svg);
+  background-repeat: repeat-x;
+  background-position: right;
+}
+
+.rating .three-stars {
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  
+  width: 54px;
+  height: 18px;
+  
+  background-image: url(../images/logos/star%20.svg);
+  background-repeat: repeat-x;
+  background-position: right;
+}
+
+.rating .four-stars {
+  position: absolute;
+  
+  top: 0;
+  right: 0;
+  
+  width: 72px;
+  height: 18px;
+  
+  background-image: url(../images/logos/star%20.svg);
+  background-repeat: repeat-x;
+  background-position: right;
 }
