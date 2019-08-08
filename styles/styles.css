@@ -33,11 +33,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-  
-.content {
-  margin-left: 65px;
-  margin-right: 65px;
-}
 
 .shadow {
   width: 1200px;
@@ -75,7 +70,7 @@ input[type="radio"].visually-hidden {
 
 .main-navigation-list a {
   display: inline-block;
-  padding: 15px 40px 25px 40px;
+  padding: 15px 20px 25px 20px;
   
   color: #000;
   font-size: 16px;
@@ -152,6 +147,9 @@ input[type="radio"].visually-hidden {
 }
 
 .reasons h2 {
+  
+  margin-bottom: 40px;
+  
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
@@ -575,17 +573,27 @@ input[type="radio"].visually-hidden {
   
   overflow: hidden;
   z-index: 1;
+  
+  display: none;
 }
 
 .modal-close {
+  display: inherit;
+  
   top: 1695px;
+  -webkit-animation-name: slide-up;
   animation-name: slide-up;
-  animation-duration: 0.6s;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
 }
 
 .modal-show {
+  display: block;
+  
   top: 2093px;
+  -webkit-animation-name: bounce;
   animation-name: bounce;
+  -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
 }
 
@@ -668,6 +676,8 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 310px 10px;
   
+  -webkit-transition: 0.2s;
+  
   transition: 0.2s;
 }
 
@@ -715,17 +725,30 @@ input[type="radio"].visually-hidden {
 
 /*Анимация попапа*/
 
+@-webkit-keyframes bounce {
+  0%   { -webkit-transform: translateY(-397px); transform: translateY(-397px);  }
+  70%  { -webkit-transform: translateY(30px); transform: translateY(30px);    }
+  90%  { -webkit-transform: translateY(-10px); transform: translateY(-10px);   }
+  100% { -webkit-transform: translateY(0); transform: translateY(0);       }
+}
+
 @keyframes bounce {
-  0%   { transform: translateY(-397px);  }
-  70%  { transform: translateY(30px);    }
-  90%  { transform: translateY(-10px);   }
-  100% { transform: translateY(0);       }
+  0%   { -webkit-transform: translateY(-397px); transform: translateY(-397px);  }
+  70%  { -webkit-transform: translateY(30px); transform: translateY(30px);    }
+  90%  { -webkit-transform: translateY(-10px); transform: translateY(-10px);   }
+  100% { -webkit-transform: translateY(0); transform: translateY(0);       }
+}
+
+
+@-webkit-keyframes slide-up {
+  0%   { -webkit-transform: translateY(397px); transform: translateY(397px);       }
+  100% { -webkit-transform: translateY(0); transform: translateY(0);  }
 }
 
 
 @keyframes slide-up {
-  0%   { transform: translateY(397px);       }
-  100% { transform: translateY(0);  }
+  0%   { -webkit-transform: translateY(397px); transform: translateY(397px);       }
+  100% { -webkit-transform: translateY(0); transform: translateY(0);  }
 }
 
 /*Внутренняя страница*/
@@ -981,8 +1004,10 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin: 30px 60px;
 }
 
 .sort .results {
@@ -1006,7 +1031,9 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   font-weight: normal;
   padding: 0 50px 0 0;
+  -webkit-text-decoration-style: dotted;
   text-decoration-style: dotted;
+  -webkit-text-decoration-color: #81b3d2;
   text-decoration-color: #81b3d2;
   
   opacity: 0.9;
@@ -1048,8 +1075,15 @@ input[type="radio"].visually-hidden {
 }
 
 .searched-variants {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   
   margin: 0;
@@ -1059,8 +1093,15 @@ input[type="radio"].visually-hidden {
 }
 
 .searched-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 90px;
   max-width: 1200px;
@@ -1075,6 +1116,8 @@ input[type="radio"].visually-hidden {
 }
 
 .searched-item .searched-item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1084,9 +1127,18 @@ input[type="radio"].visually-hidden {
 }
 
 .searched-item-wrapper .description-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   min-width: 260px;
   
@@ -1094,8 +1146,12 @@ input[type="radio"].visually-hidden {
 }
 
 .description-wrapper i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   min-width: 125px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   
   font-style: normal;
@@ -1106,8 +1162,15 @@ input[type="radio"].visually-hidden {
 
 .searched-variants .rating {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   
   margin: 0;
