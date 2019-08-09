@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Городок SEDONA</title>
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
 </head>
 
 <body class="shadow inner-page">
@@ -15,9 +15,9 @@
       <ul class="main-navigation-list">
         <li><a href="index.html">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
-        <li><a href="#"><img src="images/logos/logo.png" alt="Логотип города Седона"></a></li>
+        <li><a><img src="images/logos/logo.png" alt="Логотип города Седона"></a></li>
         <li><a href="#">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+        <li><a>Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -28,8 +28,8 @@
         <h2 class="visually-hidden">Поиск отеля</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <div class="accomodations">
+            <div class="infrastructure">
             <fieldset>
-                <div class="infrastructure">
                 <legend>Инфраструктура:</legend>
                     <ul>
                         <li class="filter-option">
@@ -51,11 +51,11 @@
                           WI-FI</label>
                         </li>
                     </ul>
-              </div>
             </fieldset>
+          </div>
             
+          <div class="housing-type">
             <fieldset>
-                <div class="housing-type">
                 <legend>Тип жилья:</legend>
                     <ul>
                         <li class="filter-option">
@@ -77,8 +77,9 @@
                           Апартаменты</label>
                         </li>
                     </ul>
-              </div>
             </fieldset>
+            </div>
+            
             </div>
             <div class="cost">
             <fieldset>
@@ -91,7 +92,7 @@
                 <input class="filter-input-cost filter-input-cost-2" type="text" name="cost-max" placeholder="ДО 50000"  id="cost-max">
               </div>
               <label class="visually-hidden" for="filter-cost">Стоимость</label>
-              <input class="filter-input-range" type="range" min="0" max="50000" step="100"  name="cost" id="filter-cost">
+              <input class="filter-input-range range-custom" type="range" min="0" max="50000" step="100"  name="cost" id="filter-cost">
             </fieldset>
             <button class="button filter-button" type="submit">Показать</button>
             </div>
@@ -109,14 +110,14 @@
         </div>
         <div class="arrows">
           <a class="up" href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	        width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
             <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
             </svg>
           <span class="visually-hidden">По возрастанию</span>
           </a>
           <a class="down" href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	        width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
             <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
             </svg>
@@ -138,13 +139,15 @@
                     <i>От 7000 Р.</i>
                   </span>
                   <div>
-                    <button class="button">Подробнее</button>
-                    <button class="button">Забронировать</button>
+                    <button class="button button-about">Подробнее</button>
+                    <button class="button button-booking">Забронировать</button>
                   </div>
                 </div>
               </div>
               <p class="rating">
-                <span>4 звезды</span>
+                <i class="four-stars">
+                  <span class="visually-hidden">4 звезды</span>
+                </i>
                 <b>Рейтинг: 8,5</b>
               </p>
             </li>
@@ -159,13 +162,15 @@
                     <i>От 5000 Р.</i>
                   </span>
                   <div>
-                    <button class="button">Подробнее</button>
-                    <button class="button">Забронировать</button>
+                    <button class="button button-about">Подробнее</button>
+                    <button class="button button-booking">Забронировать</button>
                   </div>
                 </div>
               </div>
               <p class="rating">
-                <span>3 звезды</span>
+                <i class="three-stars">
+                  <span class="visually-hidden">3 звезды</span>
+                </i>
                 <b>Рейтинг: 8,9</b>
               </p>
             </li>
@@ -180,13 +185,15 @@
                     <i>ОТ 6500 Р.</i>
                   </span>
                   <div>
-                    <button class="button">Подробнее</button>
-                    <button class="button">Забронировать</button>
+                    <button class="button button-about">Подробнее</button>
+                    <button class="button button-booking">Забронировать</button>
                   </div>
                 </div>
               </div>
               <p class="rating">
-                <span>2 звезды</span>
+                <i class="two-stars">
+                  <span class="visually-hidden">2 звезды</span>
+                </i>
                 <b>Рейтинг: 9,4</b>
               </p>
             </li>
