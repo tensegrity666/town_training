@@ -1,6 +1,6 @@
 html,
 body {
-  min-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0;
 
@@ -98,6 +98,8 @@ input[type="radio"].visually-hidden {
   margin-top: -15px;
   width: 138px;
   height: 70px;
+  
+  z-index: 2;
 }
 
 .promo img {
@@ -110,7 +112,11 @@ input[type="radio"].visually-hidden {
   
   object-fit: cover;
   
-  background-color: #396282;
+  -webkit-clip-path: polygon(0 0, 0 90%, 25% 95%, 25% 90%, 50% 100%,
+                    75% 90%, 75% 95%, 100% 90%, 100% 0);
+  
+  clip-path: polygon(0 0, 0 90%, 25% 95%, 25% 90%, 50% 100%,
+                    75% 90%, 75% 95%, 100% 90%, 100% 0);
 }
 
 .inner-page .promo {
