@@ -858,14 +858,21 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  -ms-flex-preferred-size: 400px;
-  flex-basis: 400px;
+  min-width: 150px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   
-  margin: 35px 0 10px 65px;
+  margin: 35px 10px 10px 65px;
 }
 
 .infrastructure ul, 
 .housing-type ul {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   list-style: none;
   margin: 0;
   padding: 0;
